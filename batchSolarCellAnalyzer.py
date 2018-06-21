@@ -3,6 +3,7 @@
 
 from PyQt5 import QtWidgets, QtGui
 from UIfiles.BSA_MainGui import Ui_MainWindow
+from UIfiles.SetupUI import SetupUI
 import sys
 
 
@@ -11,6 +12,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        SetupUI(self)
         # SLOTS:
         self.ui.closeAppButton.clicked.connect(self.closeFunction)
         self.ui.actionClose.triggered.connect(self.closeFunction)
