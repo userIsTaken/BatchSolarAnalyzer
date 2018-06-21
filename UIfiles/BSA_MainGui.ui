@@ -65,7 +65,7 @@
     <item row="1" column="0" colspan="5">
      <widget class="QTabWidget" name="simpleIVplotWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="filesTab">
        <attribute name="title">
@@ -97,7 +97,7 @@
       </widget>
       <widget class="QWidget" name="plotTab">
        <attribute name="title">
-        <string>Plots</string>
+        <string>Simple Plots</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="1" column="0">
@@ -146,6 +146,91 @@
           <widget class="QChartView" name="plotWidget" native="true"/>
           <widget class="QChartView" name="simplePVplotWidget" native="true"/>
          </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mainSettingsTab">
+       <attribute name="title">
+        <string>Main Settings</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Active area of solar cell, [cm]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Light energy, [mW/cm]</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>CSV/TXT file options</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Delimiter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="csvDelimiterBox"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>First Column is in</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="csvFirstColumnDimensionBox"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Second Column is in</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="csvSecondColumnDimensionBox"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>247</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
