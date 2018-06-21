@@ -4,6 +4,7 @@
 from PyQt5 import QtWidgets, QtGui
 from UIfiles.BSA_MainGui import Ui_MainWindow
 from UIfiles.SetupUI import SetupUI
+from PyQt5.QtWidgets import QFileDialog
 import sys
 
 
@@ -16,8 +17,19 @@ class MainWindow(QtWidgets.QMainWindow):
         # SLOTS:
         self.ui.closeAppButton.clicked.connect(self.closeFunction)
         self.ui.actionClose.triggered.connect(self.closeFunction)
-        self.ui.addFilesButton.clicked.connect(self.addFilesFunction)
         self.ui.clearTableButton.clicked.connect(self.clearTableFunction)
+        #LOAD files:
+        self.ui.addFilesButton.clicked.connect(self.loadFilesFunction)
+
+    def loadFilesFunction(self):
+        self.ConsoleOutput("File(s) will be add")
+        filter = "TXT (*.txt);;CSV (*.csv);;DAT (*.dat);; ANY file (*.*)"
+        file_name = QFileDialog()
+        file_name.setFileMode(QFileDialog.ExistingFiles)
+        names = file_name.getOpenFileUrls(self, "Open files", "/home/", filter)
+        for i in names[0]:
+            self.ConsoleOutput(str(i.path()))
+        pass
 
     def ConsoleOutput(self, text=None):
         if text is not None:
@@ -33,10 +45,6 @@ class MainWindow(QtWidgets.QMainWindow):
     def closeFunction(self):
         print("Exiting ... ")
         sys.exit(10)
-        pass
-
-    def addFilesFunction(self):
-        self.ConsoleOutput("FILES WILL BE ADDED")
         pass
 
 
