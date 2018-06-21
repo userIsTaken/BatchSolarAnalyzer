@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'BSA_MainGui.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.8.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -75,9 +75,9 @@ class Ui_MainWindow(object):
         self.splitter = QtWidgets.QSplitter(self.plotTab)
         self.splitter.setOrientation(QtCore.Qt.Vertical)
         self.splitter.setObjectName("splitter")
-        self.plotWidget = QChartView(self.splitter)
+        self.plotWidget = QtChart.QChartView(self.splitter)
         self.plotWidget.setObjectName("plotWidget")
-        self.simplePVplotWidget = QChartView(self.splitter)
+        self.simplePVplotWidget = QtChart.QChartView(self.splitter)
         self.simplePVplotWidget.setObjectName("simplePVplotWidget")
         self.gridLayout_5.addWidget(self.splitter, 0, 0, 1, 1)
         self.simpleIVplotWidget.addTab(self.plotTab, "")
@@ -170,4 +170,4 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "Fi&le"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
 
-from PyQt5.QtChart import QChartView
+from PyQt5 import QtChart
