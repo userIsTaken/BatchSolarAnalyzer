@@ -50,7 +50,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+       <widget class="QDoubleSpinBox" name="shortCircuitCurrentBox"/>
       </item>
       <item row="0" column="2">
        <widget class="QLabel" name="label_6">
@@ -60,7 +60,7 @@
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_6"/>
+       <widget class="QDoubleSpinBox" name="nonIdealityBox"/>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_2">
@@ -70,7 +70,7 @@
        </widget>
       </item>
       <item row="1" column="1" rowspan="2">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+       <widget class="QDoubleSpinBox" name="openCircuitVoltageBox"/>
       </item>
       <item row="1" column="2">
        <widget class="QLabel" name="label_7">
@@ -80,7 +80,7 @@
        </widget>
       </item>
       <item row="1" column="3">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_7"/>
+       <widget class="QDoubleSpinBox" name="rShuntBox"/>
       </item>
       <item row="2" column="2" rowspan="2">
        <widget class="QLabel" name="label_8">
@@ -97,10 +97,10 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+       <widget class="QDoubleSpinBox" name="maxPowerPointBox"/>
       </item>
       <item row="3" column="3">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_8"/>
+       <widget class="QDoubleSpinBox" name="rSeriesBox"/>
       </item>
       <item row="4" column="0">
        <widget class="QLabel" name="label_4">
@@ -110,7 +110,7 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+       <widget class="QDoubleSpinBox" name="fillFactorBox"/>
       </item>
       <item row="5" column="0">
        <widget class="QLabel" name="label_5">
@@ -120,7 +120,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
+       <widget class="QDoubleSpinBox" name="efficiencyBox"/>
       </item>
      </layout>
     </widget>
