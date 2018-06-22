@@ -3,7 +3,7 @@
 
 from PyQt5 import QtWidgets, QtGui
 from UIfiles.BSA_MainGui import Ui_MainWindow
-from UIfiles.SetupUI import SetupUI
+from UIfiles.SetupUI import SetupUI, FillFiles
 from PyQt5.QtWidgets import QFileDialog
 import sys
 
@@ -29,6 +29,10 @@ class MainWindow(QtWidgets.QMainWindow):
         names = file_name.getOpenFileUrls(self, "Open files", "/home/", filter)
         for i in names[0]:
             self.ConsoleOutput(str(i.path()))
+        # MAIN LOADER:
+        for i in names[0]:
+            file_path = i
+            FillFiles(self.ui, file_path)
         pass
 
     def ConsoleOutput(self, text=None):

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'BSA_MainGui.ui'
 #
-# Created by: PyQt5 UI code generator 5.8.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(675, 637)
+        MainWindow.resize(1046, 625)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
@@ -36,9 +36,11 @@ class Ui_MainWindow(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.filesTab)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.tableWithFiles = QtWidgets.QTableWidget(self.filesTab)
+        self.tableWithFiles.setColumnCount(10)
         self.tableWithFiles.setObjectName("tableWithFiles")
-        self.tableWithFiles.setColumnCount(0)
         self.tableWithFiles.setRowCount(0)
+        self.tableWithFiles.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWithFiles.horizontalHeader().setStretchLastSection(True)
         self.gridLayout_2.addWidget(self.tableWithFiles, 0, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(self.filesTab)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
@@ -75,9 +77,9 @@ class Ui_MainWindow(object):
         self.splitter = QtWidgets.QSplitter(self.plotTab)
         self.splitter.setOrientation(QtCore.Qt.Vertical)
         self.splitter.setObjectName("splitter")
-        self.plotWidget = QtChart.QChartView(self.splitter)
+        self.plotWidget = QChartView(self.splitter)
         self.plotWidget.setObjectName("plotWidget")
-        self.simplePVplotWidget = QtChart.QChartView(self.splitter)
+        self.simplePVplotWidget = QChartView(self.splitter)
         self.simplePVplotWidget.setObjectName("simplePVplotWidget")
         self.gridLayout_5.addWidget(self.splitter, 0, 0, 1, 1)
         self.simpleIVplotWidget.addTab(self.plotTab, "")
@@ -131,7 +133,7 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.simpleIVplotWidget, 1, 0, 1, 5)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 675, 31))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1046, 31))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -170,4 +172,4 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "Fi&le"))
         self.actionClose.setText(_translate("MainWindow", "Close"))
 
-from PyQt5 import QtChart
+from PyQt5.QtChart import QChartView

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'AnalysisWidget.ui'
 #
-# Created by: PyQt5 UI code generator 5.8.2
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -14,7 +14,7 @@ class Ui_Dialog(object):
         Dialog.resize(564, 676)
         self.gridLayout_2 = QtWidgets.QGridLayout(Dialog)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.advancedPlotWidget = QtChart.QChartView(Dialog)
+        self.advancedPlotWidget = QChartView(Dialog)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -108,4 +108,4 @@ class Ui_Dialog(object):
         self.savePNGButton.setText(_translate("Dialog", "Save as PNG"))
         self.closeButton.setText(_translate("Dialog", "Close"))
 
-from PyQt5 import QtChart
+from PyQt5.QtChart import QChartView
