@@ -25,25 +25,26 @@ class MainWindow(QtWidgets.QMainWindow):
         if file_url is not None:
             print("File url is not None")
             rCount = self.ui.tableWithFiles.rowCount()
-            if rCount is not None:
+            print(rCount, "  rCount was...")
+            if rCount is not None and rCount != 0:
                 print("Count is not None")
                 self.ui.tableWithFiles.setRowCount(rCount + 1)
-                self.ui.tableWithFiles.setCellWidget(rCount + 1, 1, QtWidgets.QPushButton())
+                self.ui.tableWithFiles.setCellWidget(rCount, 0, QtWidgets.QPushButton( "Plot it!", self.ui.tableWithFiles))
                 cell = QtWidgets.QTableWidgetItem()
                 cell.setText(str(file_url.path()))
-                self.ui.tableWithFiles.setItem(rCount + 1, 10, cell)
-                self.ui.tableWithFiles.selectRow(rCount + 1)
+                self.ui.tableWithFiles.setItem(rCount, 9, cell)
+                self.ui.tableWithFiles.selectRow(rCount)
                 self.ui.tableWithFiles.update()
                 pass
             else:
                 print("Count is None")
                 self.ui.tableWithFiles.setRowCount(1)
                 # Fill all additional info:
-                self.ui.tableWithFiles.setCellWidget(1, 1, QtWidgets.QPushButton())
+                self.ui.tableWithFiles.setCellWidget(0, 0, QtWidgets.QPushButton( "Plot it!", self.ui.tableWithFiles))
                 cell = QtWidgets.QTableWidgetItem()
                 cell.setText(str(file_url.path()))
-                self.ui.tableWithFiles.setItem(1, 10, cell)
-                self.ui.tableWithFiles.selectRow(1)
+                self.ui.tableWithFiles.setItem(0, 9, cell)
+                self.ui.tableWithFiles.selectRow(0)
                 self.ui.tableWithFiles.update()
                 pass
             # Continue
