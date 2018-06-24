@@ -4,6 +4,7 @@
 from PyQt5 import QtWidgets, QtGui
 from UIfiles.BSA_MainGui import Ui_MainWindow
 from PyQt5.QtWidgets import QFileDialog
+from AddCl.ExtButton import mPushButton
 import sys
 
 
@@ -29,7 +30,7 @@ class MainWindow(QtWidgets.QMainWindow):
             if rCount is not None and rCount != 0:
                 print("Count is not None")
                 self.ui.tableWithFiles.setRowCount(rCount + 1)
-                self.ui.tableWithFiles.setCellWidget(rCount, 0, QtWidgets.QPushButton( "Plot it!", self.ui.tableWithFiles))
+                self.ui.tableWithFiles.setCellWidget(rCount, 0, mPushButton( "Plot it!", self.ui.tableWithFiles))
                 cell = QtWidgets.QTableWidgetItem()
                 cell.setText(str(file_url.path()))
                 self.ui.tableWithFiles.setItem(rCount, 9, cell)
@@ -40,7 +41,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 print("Count is None")
                 self.ui.tableWithFiles.setRowCount(1)
                 # Fill all additional info:
-                self.ui.tableWithFiles.setCellWidget(0, 0, QtWidgets.QPushButton( "Plot it!", self.ui.tableWithFiles))
+                self.ui.tableWithFiles.setCellWidget(0, 0, mPushButton( "Plot it!", self.ui.tableWithFiles))
                 cell = QtWidgets.QTableWidgetItem()
                 cell.setText(str(file_url.path()))
                 self.ui.tableWithFiles.setItem(0, 9, cell)
